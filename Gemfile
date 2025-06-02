@@ -65,3 +65,11 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+gem 'tailwindcss-rails'
+
+gem 'sidekiq'
+gem 'redis'
+gem 'foreman'
+
+gem "importmap-rails", "~> 2.1"
+gem 'turbo-rails'

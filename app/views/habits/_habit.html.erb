@@ -1,0 +1,52 @@
+<div id="<%= dom_id(habit) %>" class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all transform hover:-translate-y-1">
+  <!-- Header -->
+  <div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-6">
+    <div class="flex justify-between items-center">
+      <h2 class="text-xl font-bold text-white"><%= habit.name %></h2>
+      <div class="flex gap-2">
+        <%= link_to edit_habit_path(habit), class: "text-blue-100 hover:text-white" do %>✏️<% end %>
+        <%= button_to habit, method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, class: "text-red-200 hover:text-white" do %>🗑️<% end %>
+      </div>
+    </div>
+    <% if habit.description.present? %>
+      <p class="text-indigo-100 text-sm mt-2"><%= habit.description %></p>
+    <% end %>
+  </div>
+
+  <!-- Body -->
+  <div class="p-6">
+    <!-- Progress -->
+    <div class="mb-6">
+      <div class="flex justify-between text-sm text-gray-500 mb-1">
+        <span>Progress</span>
+        <span id="<%= dom_id(habit, :consistency) %>"><%= habit.consistency_percentage %>%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5">
+        <div class="bg-gradient-to-r from-indigo-400 to-purple-500 h-2.5 rounded-full" 
+             style="width: <%= habit.consistency_percentage %>%"
+             id="<%= dom_id(habit, :progress_bar) %>"></div>
+      </div>
+    </div>
+
+    
+
+    <!-- Stats -->
+    <div class="grid grid-cols-3 gap-4 text-center">
+      <div class="bg-indigo-50 p-3 rounded-xl">
+        <p class="text-xs text-indigo-500 font-semibold">Current Streak</p>
+        <p class="text-2xl font-bold text-indigo-700" id="<%= dom_id(habit, :current_streak) %>"><%= habit.current_streak %></p>
+        <p class="text-xs text-indigo-400">days</p>
+      </div>
+      <div class="bg-purple-50 p-3 rounded-xl">
+        <p class="text-xs text-purple-500 font-semibold">Longest Streak</p>
+        <p class="text-2xl font-bold text-purple-700" id="<%= dom_id(habit, :longest_streak) %>"><%= habit.longest_streak %></p>
+        <p class="text-xs text-purple-400">days</p>
+      </div>
+      <div class="bg-green-50 p-3 rounded-xl">
+        <p class="text-xs text-green-500 font-semibold">Consistency</p>
+        <p class="text-2xl font-bold text-green-700" id="<%= dom_id(habit, :consistency_percentage) %>"><%= habit.consistency_percentage %>%</p>
+        <p class="text-xs text-green-400">success</p>
+      </div>
+    </div>
+  </div>
+</div>

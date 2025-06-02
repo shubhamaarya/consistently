@@ -34,8 +34,10 @@ class Habit < ApplicationRecord
 
   def consistency_percentage
     total_days = (Date.today - created_at.to_date).to_i + 1
-    return 0 if total_days.zero?
-    
-    (habit_checkins.count.to_f / total_days * 100).round
+    return 0 if total_days <= 0
+
+    done_days = habit_checkins.count
+    percentage = (done_days.to_f / total_days) * 100
+    percentage.round
   end
 end

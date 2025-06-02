@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root "habits#index"
+  
+  resources :habits do
+    resources :checkins, only: [:create, :destroy]
+  end
 end

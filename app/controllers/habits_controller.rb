@@ -1,9 +1,9 @@
 class HabitsController < ApplicationController
-  before_action :authenticate_user!
   
   def index
     @habits = current_user.habits.includes(:habit_checkins)
     @today = Date.today
+    @start_date = @today - 6.days 
   end
   
   def new

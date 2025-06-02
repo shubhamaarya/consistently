@@ -1,0 +1,12 @@
+<%= turbo_stream.replace dom_id(@habit) do %>
+  <%= render partial: "habits/habit", locals: {
+        habit: @habit,
+        start_date: Date.today - 6.days,
+        today: Date.today
+      } %>
+<% end %>
+
+<%= turbo_stream.update "flash" do %>
+  <%= render "shared/flash" %>
+<% end %>
+
