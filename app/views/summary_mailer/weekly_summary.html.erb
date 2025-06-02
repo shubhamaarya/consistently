@@ -1,0 +1,8 @@
+<h1>Hello <%= @user.name %>!</h1>
+<p>Here's your weekly habit summary:</p>
+
+<ul>
+  <% @habits.each do |habit| %>
+    <li><strong><%= habit.name %>:</strong> <%= habit.consistency_percentage %>% consistency</li>
+  <% end %>
+</ul>

@@ -73,3 +73,4 @@ gem 'foreman'
 
 gem "importmap-rails", "~> 2.1"
 gem 'turbo-rails'
+gem 'sidekiq-cron'
