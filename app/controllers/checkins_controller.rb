@@ -9,7 +9,9 @@ class CheckinsController < ApplicationController
     @date = @checkin.date
     respond_to do |format|
       format.turbo_stream
+      format.html { redirect_to habits_path, notice: "Check-in created" }
     end
+  
   end
 
   def destroy
@@ -18,6 +20,7 @@ class CheckinsController < ApplicationController
     @checkin.destroy!
     respond_to do |format|
       format.turbo_stream
+      format.html { redirect_to habits_path}
     end
   end
 
