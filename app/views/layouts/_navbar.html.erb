@@ -1,0 +1,89 @@
+<nav class="navbar navbar-expand-lg shadow-sm py-3"
+     style="background: linear-gradient(90deg,
+       rgba(248, 211, 229, 0.6) 0%,
+       rgba(214, 200, 255, 0.6) 40%,
+       rgba(191, 166, 255, 0.6) 70%,
+       rgba(156, 136, 255, 0.6) 100%);
+     backdrop-filter: blur(6px);">
+  <div class="container-fluid">
+    
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+      <%= image_tag("logoz.png", alt: "Logo", height: "50", class: "me-2") %>
+      <span class="fs-5 text-dark">Consistently</span>
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav mx-auto gap-lg-4 text-center text-lg-start">
+        <li class="nav-item">
+          <%= link_to "Home", home_path, class: "nav-link text-dark fw-medium" %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark fw-medium" href="#" id="whyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Why Consistently?
+          </a>
+          <ul class="dropdown-menu shadow-sm border-0 rounded-4" aria-labelledby="whyDropdown">
+            <li><%= link_to "10 reasons why", "#", class: "dropdown-item" %></li>
+            <li><%= link_to "Success stories", "#", class: "dropdown-item" %></li>
+            <li><%= link_to "AI meets EI", "#", class: "dropdown-item" %></li>
+            <li><%= link_to "Our story", "#", class: "dropdown-item" %></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Resources", "#", class: "nav-link text-dark fw-medium" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Pricing", "#", class: "nav-link text-dark fw-medium" %>
+        </li>
+      </ul>
+
+      <!-- Right Controls -->
+      <div class="d-flex align-items-center justify-content-center gap-2 mt-3 mt-lg-0">
+        <%# <div class="dropdown">
+          <button class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            EN
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">EN</a></li>
+            <li><a class="dropdown-item" href="#">FR</a></li>
+          </ul>
+        </div> %>
+
+        <% if user_signed_in? %>
+
+          <%#= button_to destroy_user_session_path, method: :delete, class: "btn btn-sm btn-outline-dark rounded-pill d-flex align-items-center gap-2" do %>
+           <!--  <span>Sign out</span>
+            <i class="bi bi-box-arrow-right"></i> -->
+          <%# end %>
+
+          <li class="nav-item d-flex align-items-center">
+
+
+            <%= image_tag "user.webp", class: "rounded-circle me-2", size: "65x65", alt: current_user.email %>
+
+              <div class="d-flex flex-column justify-content-center me-3">
+                <strong class="text-dark">THIS IS DEFAULT NAME</strong> 
+                <small class="text-muted"><%= current_user.email %></small>
+                <%= button_to destroy_user_session_path, method: :delete, class: "btn btn-sm btn-outline-dark rounded-pill d-flex align-items-center gap-2" do %>
+                  <span>Sign out</span>
+                  <i class="bi bi-box-arrow-right"></i> 
+                <% end %>
+              </div> 
+                <%# end %>
+          </li>
+
+        <% else %>
+          <%= link_to "Sign in", new_user_session_path, class: "btn btn-sm btn-dark rounded-pill px-3" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-sm btn-outline-dark rounded-pill px-3" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</nav>

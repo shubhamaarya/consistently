@@ -1,0 +1,237 @@
+<div class="container my-5">
+  <div class="row g-4">
+    <!-- Left Section (Text + Buttons) -->
+    <div class="col-lg-6">
+      <div style="background-color: #eadafd; padding: 4rem 2rem; border-radius: 1rem;">
+        <h1 style="font-size: 3rem; font-weight: bold; line-height: 1.2;"><i class="bi bi-heart-pulse-fill me-2"></i>Healthy<br><i class="bi bi-check2-circle me-2"></i>habits<br>finally made<br>simple.</h1>
+        <p style="font-size: 1.25rem; margin-top: 1rem;">Build routines. Stay consistent. <br>See real progress—starting today.</p>
+        <div class="d-flex gap-3 mt-4">
+          <a href="#" class="btn btn-danger btn-lg" style="border-radius: 2rem;">
+            👉 Start Your Journey
+          </a>
+          <a href="#" class="btn btn-light btn-lg" style="border-radius: 2rem;">
+            📺 See Habits Video
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section (Color Blocks instead of Images) -->
+    <div class="col-lg-6">
+      <div class="row g-3">
+        <div class="col-12">
+          <div style="background-color: #ffd6e0; border-radius: 1rem; height: 280px;"></div>
+        </div>
+        <div class="col-6">
+          <div style="background-color: #d0f0f7; border-radius: 1rem; height: 210px;"></div>
+        </div>
+        <div class="col-6">
+          <div style="background-color: #c1b2f0; border-radius: 1rem; height: 210px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="max-width: 1110px; margin: auto; border-radius: 1rem; overflow: hidden; background-color: #fff; padding: 1.5rem 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.05); position: relative; margin-bottom: 3rem;">
+
+  <!-- Static label -->
+  <div style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); z-index: 2; background-color: #fff; padding-right: 1rem;">
+    <span style="font-family: 'Georgia', serif; font-size: 1.3rem; font-weight: 600;">Trusted by</span>
+  </div>
+
+  <!-- Scrolling container -->
+  <div style="padding-left: 150px;">
+    <div style="display: flex; gap: 3rem; animation: scroll-left 25s linear infinite; white-space: nowrap;">
+      <% 12.times do %>
+        <%= image_tag("google1.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("apple.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("facebook.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("insta.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("pint.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("reddit.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("whatsapp.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("youtube.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("Tiktok.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("link.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("gemini.png", style: "height: 36px; display: inline-block;") %>
+        <%= image_tag("chatgpt.png", style: "height: 36px; display: inline-block;") %>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Keyframes animation -->
+  <style>
+    @keyframes scroll-left {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</div>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+<div style="background-color: #fcddec; padding: 4rem 2rem; border-radius: 2rem; max-width: 1140px; margin: 0 auto;">
+  <div style="background-color: #ffffff; border-radius: 1.5rem; padding: 2rem;">
+    
+    <!-- Greeting -->
+    <h3 style="font-weight: 600;">Hey, Ritikesh <i class="bi bi-heart-pulse-fill text-warning"></i></i></h4>
+
+    <!-- Top Cards -->
+    <div class="row mt-4 g-3">
+      <div class="col-md-4">
+        <div style="background: #f9f9f9; border-radius: 1rem; padding: 1rem;">
+          <h5 style="font-weight: 600;">Your Strongest Habits</h6>
+          <p style="margin: 0;">
+            <i class="bi bi-journal-check text-success"></i> Reading Daily<br>
+            <i class="bi bi-clock-history text-info"></i> Waking Up Early
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="background: #f9f9f9; border-radius: 1rem; padding: 1rem;">
+          <h5 style="font-weight: 600;">Trending Habit</h6>
+          <p style="margin: 0;">
+            <i class="bi bi-droplet-half text-primary"></i> Drinking More Water<br>
+            <small>Adopted by 1,629 users this month</small>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="background: #f9f9f9; border-radius: 1rem; padding: 1rem;">
+          <h5 style="font-weight: 600;">Habit Streak</h6>
+          <p style="font-size: 1.5rem; font-weight: bold;">42 days</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Title -->
+    <h5 class="mt-5 mb-3">Time spent on daily habits</h5>
+
+    <!-- Fake Chart Row -->
+    <div class="row g-3 mb-4">
+      <div class="col">
+        <div style="background-color: #ff6f61; height: 60px; border-radius: 0.5rem;"></div>
+      </div>
+      <div class="col">
+        <div style="background-color: #f4c430; height: 60px; border-radius: 0.5rem;"></div>
+      </div>
+      <div class="col">
+        <div style="background-color: #80ced6; height: 60px; border-radius: 0.5rem;"></div>
+      </div>
+      <div class="col">
+        <div style="background-color: #c4b0ff; height: 60px; border-radius: 0.5rem;"></div>
+      </div>
+      <div class="col">
+        <div style="background-color: #c3f584; height: 60px; border-radius: 0.5rem;"></div>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="row">
+      <div class="col-md-6">
+        <ul style="list-style: none; padding-left: 0;">
+          <li><span style="color: #ff6f61;">●</span> Exercise – 1 hr/day</li>
+          <li><span style="color: #f4c430;">●</span> Journaling – 30 mins</li>
+          <li><span style="color: #80ced6;">●</span> Meditation – 20 mins</li>
+          <li><span style="color: #c4b0ff;">●</span> Language Learning – 40 mins</li>
+          <li><span style="color: #c3f584;">●</span> Reading – 45 mins</li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<div class="container py-5" style="max-width: 1160px;">
+  <div class="row align-items-center">
+    
+    <!-- Left Panel -->
+    <div class="col-md-6">
+      <div style="background-color: #e0f7fa; padding: 2rem; border-radius: 0.75rem; text-align: center;">
+        <h4 class="mb-4" style="font-weight: 500;">Choose the habits<br>you want to build</h4>
+        
+        <div class="row g-3 mb-4">
+          <!-- Habit Icons Grid -->
+          <div class="col-4">
+            <div class="bg-white" style="border-radius: 0.9rem; padding: 1rem;">
+              <i class="bi bi-sun text-warning" style="font-size: 1.5rem;"></i><br>
+              <small>Morning Routine</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="bg-white" style="border-radius: 0.5rem; padding: 1rem;">
+              <i class="bi bi-droplet text-primary" style="font-size: 1.5rem;"></i><br>
+              <small>Hydration</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="bg-white" style="border-radius: 0.5rem; padding: 1rem;">
+              <i class="bi bi-heart-pulse text-danger" style="font-size: 1.5rem;"></i><br>
+              <small>Exercise</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="bg-white" style="border-radius: 0.5rem; padding: 1rem;">
+              <i class="bi bi-book text-success" style="font-size: 1.5rem;"></i><br>
+              <small>Reading</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="bg-white" style="border-radius: 0.5rem; padding: 1rem;">
+              <i class="bi bi-moon-stars text-purple" style="font-size: 1.5rem;"></i><br>
+              <small>Sleep Routine</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="bg-white" style="border-radius: 0.5rem; padding: 1rem;">
+              <i class="bi bi-journal-check text-info" style="font-size: 1.5rem;"></i><br>
+              <small>Journaling</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-center gap-3">
+          <button class="btn btn-primary rounded-pill px-4" style="background: linear-gradient(90deg, #f8d3e5, #d6c8ff, #9c88ff); box-shadow: 0 4px 10px rgba(156, 136, 255, 0.3);">
+            <i class="bi bi-play-circle"></i> Start Habit Builder
+          </button>
+          <button class="btn btn-secondary rounded-pill px-4" style="background: linear-gradient(90deg, #f8d3e5, #d6c8ff, #9c88ff); box-shadow: 0 4px 10px rgba(156, 136, 255, 0.3);">
+            Explore Wellness Tips
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="col-md-6 mt-5 mt-md-0">
+      <h2 class="mb-3" style="font-family: 'Georgia', serif; font-weight: 600;">Small steps<br>big changes</h2>
+      <p class="mb-4" style="font-size: 1rem; color: #444;">
+        Build lasting habits with a personalized system that encourages consistency and tracks your progress over time. Start making changes that matter—one step at a time.
+      </p>
+
+      <div class="d-flex gap-3 flex-wrap">
+        <div class="bg-white shadow-sm text-center" style="border-radius: 0.5rem; min-width: 120px; padding: 1rem;">
+          <i class="bi bi-bar-chart text-success" style="font-size: 1.5rem;"></i><br>
+          <small>Track Progress</small>
+        </div>
+        <div class="bg-white shadow-sm text-center" style="border-radius: 0.5rem; min-width: 120px; padding: 1rem;">
+          <i class="bi bi-award text-warning" style="font-size: 1.5rem;"></i><br>
+          <small>Earn Rewards</small>
+        </div>
+        <div class="bg-white shadow-sm text-center" style="border-radius: 0.5rem; min-width: 120px; padding: 1rem;">
+          <i class="bi bi-check-circle text-primary" style="font-size: 1.5rem;"></i><br>
+          <small>Stay Consistent</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

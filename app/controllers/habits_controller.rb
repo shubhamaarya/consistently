@@ -5,6 +5,10 @@ class HabitsController < ApplicationController
     @today = Date.today
     @start_date = @today - 6.days 
   end
+
+  def home
+    @users = User.all
+  end
   
   def new
     @habit = current_user.habits.new

@@ -1,21 +1,45 @@
 <div class="container my-5">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
-      <%= form_with model: habit, class: "needs-validation", local: true do |form| %>
-        <div class="mb-3">
-          <%= form.label :name, "Habit Name", class: "form-label" %>
-          <%= form.text_field :name, class: "form-control", required: true %>
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-sm" style="
+          border-radius: 1rem;
+          overflow: hidden;
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(5px);
+          border: 1px solid rgba(255, 192, 203, 0.2);
+        ">
+        <div class="card-header text-center fw-bold text-dark" style="
+            background: linear-gradient(90deg,
+              rgba(255, 192, 203, 0.25) 0%,
+              rgba(221, 160, 221, 0.3) 40%,
+              rgba(216, 191, 216, 0.3) 70%,
+              rgba(230, 230, 250, 0.25) 100%);
+            border-bottom: none;
+            font-size: 1.25rem;
+          ">
+          🌸 Habits
         </div>
 
-        <div class="mb-3">
-          <%= form.label :description, "Description", class: "form-label" %>
-          <%= form.text_area :description, rows: 3, class: "form-control", required: true %>
-        </div>
+        <div class="card-body p-4">
+          <%= form_with model: habit, class: "needs-validation", local: true do |form| %>
+            <div class="mb-3">
+              <%= form.label :name, "Habit Name", class: "form-label" %>
+              <%= form.text_field :name, class: "form-control", required: true %>
+            </div>
 
-        <div class="text-end">
-          <%= form.submit "Create Habit", class: "btn btn-primary" %>
+            <div class="mb-3">
+              <%= form.label :description, "Description", class: "form-label" %>
+              <%= form.text_area :description, rows: 3, class: "form-control", required: true %>
+            </div>
+            
+            <div class="d-flex justify-content-end gap-2 mt-3">
+              <%= link_to "Cancel", habits_path, class: "btn px-4 py-2 rounded-pill text-white border-0", style: "background: linear-gradient(90deg, #f8d3e5, #d6c8ff, #9c88ff); box-shadow: 0 4px 10px rgba(156, 136, 255, 0.3);" %>
+              
+              <%= form.submit "Submit", class: "btn px-4 py-2 rounded-pill text-white border-0", style: "background: linear-gradient(90deg, #f8d3e5, #d6c8ff, #9c88ff); box-shadow: 0 4px 10px rgba(156, 136, 255, 0.3);" %>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

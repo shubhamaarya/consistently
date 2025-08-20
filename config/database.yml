@@ -7,7 +7,7 @@ development:
   <<: *default
   database: consistently_development
   username: postgres
-  password: password
+  password: Ritikesh@123
   host: localhost
   port: 5432
 
@@ -15,7 +15,7 @@ test:
   <<: *default
   database: consistently_test
   username: postgres
-  password: password
+  password: Ritikesh@123
   host: localhost
   port: 5432
 
